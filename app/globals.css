@@ -1,86 +1,189 @@
-*{
-    margin:0;
-    padding:0;
-    box-sizing:border-box;
+/* ===================================
+   FLUX DESIGN SYSTEM
+=================================== */
+
+:root {
+  --background: #0b1120;
+  --sidebar: #111827;
+  --card: #1e293b;
+
+  --primary: #3b82f6;
+  --primary-hover: #2563eb;
+
+  --text: #f8fafc;
+  --text-secondary: #94a3b8;
+
+  --border: #334155;
+
+  --radius: 12px;
 }
 
-body{
-    background:#0f172a;
-    color:white;
-    font-family:Arial,Helvetica,sans-serif;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-.navbar{
-    display:flex;
-    justify-content:space-between;
-    align-items:center;
-    padding:20px 80px;
-    background:#111827;
+html,
+body {
+  width: 100%;
+  min-height: 100%;
 }
 
-.logo{
-    font-size:28px;
-    font-weight:bold;
-    color:#60a5fa;
+body {
+  background: var(--background);
+  color: var(--text);
+  font-family: Arial, Helvetica, sans-serif;
 }
 
-.nav-links{
-    display:flex;
-    gap:30px;
-    align-items:center;
+a {
+  text-decoration: none;
+  color: inherit;
 }
 
-.nav-links a{
-    color:white;
+button {
+  cursor: pointer;
+  border: none;
+  font-family: inherit;
 }
 
-.nav-links button{
-    background:#2563eb;
-    color:white;
-    border:none;
-    padding:10px 20px;
-    border-radius:8px;
+img {
+  max-width: 100%;
 }
 
-.hero{
-    max-width:900px;
-    margin:120px auto;
-    text-align:center;
-    padding:20px;
+/* ==========================
+   NAVBAR
+========================== */
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 25px 80px;
 }
 
-.hero h1{
-    font-size:56px;
-    margin-bottom:20px;
+.logo {
+  font-size: 34px;
+  font-weight: bold;
+  color: var(--primary);
 }
 
-.hero p{
-    font-size:20px;
-    color:#cbd5e1;
-    margin-bottom:40px;
-    line-height:1.6;
+.nav-links {
+  display: flex;
+  align-items: center;
+  gap: 35px;
 }
 
-.hero-buttons{
-    display:flex;
-    justify-content:center;
-    gap:20px;
+.nav-links a {
+  color: white;
+  transition: 0.3s;
 }
 
-.primary-btn{
-    background:#2563eb;
-    color:white;
-    border:none;
-    padding:15px 35px;
-    border-radius:10px;
-    font-size:18px;
+.nav-links a:hover {
+  color: var(--primary);
 }
 
-.secondary-btn{
-    background:transparent;
-    color:white;
-    border:1px solid #475569;
-    padding:15px 35px;
-    border-radius:10px;
-    font-size:18px;
+/* ==========================
+   HERO
+========================== */
+
+.hero {
+  max-width: 950px;
+  margin: 120px auto;
+  text-align: center;
+  padding: 20px;
+}
+
+.hero h1 {
+  font-size: 68px;
+  line-height: 1.15;
+  margin-bottom: 25px;
+}
+
+.hero p {
+  font-size: 22px;
+  color: var(--text-secondary);
+  line-height: 1.7;
+  margin-bottom: 50px;
+}
+
+.hero-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+
+/* ==========================
+   BUTTONS
+========================== */
+
+.btn {
+  padding: 16px 34px;
+  border-radius: 10px;
+  font-size: 17px;
+  font-weight: bold;
+  transition: 0.3s;
+}
+
+.primary {
+  background: var(--primary);
+  color: white;
+}
+
+.primary:hover {
+  background: var(--primary-hover);
+}
+
+.secondary {
+  background: transparent;
+  color: white;
+  border: 1px solid var(--border);
+}
+
+.secondary:hover {
+  background: var(--card);
+}
+
+/* ==========================
+   DASHBOARD
+========================== */
+
+.dashboard-layout {
+  display: flex;
+}
+
+.dashboard-content {
+  flex: 1;
+  padding: 40px;
+  background: #f5f7fb;
+  color: #111827;
+  min-height: 100vh;
+}
+
+/* ==========================
+   SIDEBAR
+========================== */
+
+.sidebar {
+  width: 260px;
+  min-height: 100vh;
+  background: var(--sidebar);
+  padding: 35px 20px;
+}
+
+.menu {
+  display: flex;
+  flex-direction: column;
+  margin-top: 50px;
+  gap: 18px;
+}
+
+.menu a {
+  padding: 14px 16px;
+  border-radius: 10px;
+  transition: 0.3s;
+}
+
+.menu a:hover {
+  background: var(--card);
 }
